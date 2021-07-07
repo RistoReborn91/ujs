@@ -8,22 +8,23 @@ function CalcLinkedMax(e, _localFieldName, _extLibName, _extFieldName) {
 	log("====================================");
 
 
-	var tasklib = libByName(_extLibName);
-	var links = tasklib.linksTo(e);
-	var max = 0;
+	if (e != null && _localFieldName != null && _extLibName != null && _extFieldName != null) {
+		var tasklib = libByName(_extLibName);
+		var links = tasklib.linksTo(e);
+		var max = 0;
 
 
-	for (var i = 0; i < links.length; i++) {
+		for (var i = 0; i < links.length; i++) {
 
-	  var current_value = links[i].field(_extFieldName);
-	  
-	  if (max < _current_value)
-		  max = _current_value;
-	  
+		  var current_value = links[i].field(_extFieldName);
+		  
+		  if (max < _current_value)
+			  max = _current_value;
+		  
+		}
+
+
+		e.set(_localFieldName, max);
+
 	}
-
-
-	e.set(_localFieldName, max);
-
-
 }
