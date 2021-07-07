@@ -1,4 +1,13 @@
 function CalcLinkedMax(e, _localFieldName, _extLibName, _extFieldName) {
+	
+	log("====================================");
+	log("e: The current entry().");
+	log("_localFieldName: The name of the local library field that will hold the result.");
+	log("_extLibName: The name of the linked library.");
+	log("_extFieldName: The name of the linked library field from which results are calculated.");
+	log("====================================");
+
+
 	var tasklib = libByName(_extLibName);
 	var links = tasklib.linksTo(e);
 	var max = 0;
