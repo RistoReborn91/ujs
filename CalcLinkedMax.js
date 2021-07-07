@@ -18,8 +18,8 @@ function CalcLinkedMax(e, _localFieldName, _extLibName, _extFieldName) {
 
 		  var current_value = links[i].field(_extFieldName);
 		  
-		  if (max < _current_value)
-			  max = _current_value;
+		  if (max < current_value)
+			  max = current_value;
 		  
 		}
 
