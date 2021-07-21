@@ -8,7 +8,7 @@ function CountLinks(e, _extLibName, _extLinkFieldName, _extValueFieldName) {
 	log("====================================");
 
 
-	if (e != null && _localFieldName != null && _extLibName != null && _extValueFieldName != null) {
+	if (e != null && _extLibName != null && _extValueFieldName != null) {
 		var tasklib = libByName(_extLibName);
 		var links = tasklib.linksTo(e);
 		var result = 0;
