@@ -15,11 +15,10 @@ function CountLinks(e, _extLibName, _extLinkFieldName) {
 
 		for (var i = 0; i < links.length; i++) {
 
-		  if (links[i].field(_extLinkFieldName) == e) {
-
-		  result++;
+		  // if (links[i].field(_extLinkFieldName) == e)
+                    result++;
 		  
-		  } // if
+		 
 		  
 		} //  for loop
 
