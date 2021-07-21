@@ -24,7 +24,7 @@ function CountLinks(e, _extLibName, _extLinkFieldName) {
 		} //  for loop
 
 
-		result;
+		return result;
 
 	}
 }
