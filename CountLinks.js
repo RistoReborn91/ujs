@@ -1,14 +1,13 @@
-function CountLinks(e, _extLibName, _extLinkFieldName, _extValueFieldName) {
+function CountLinks(e, _extLibName, _extLinkFieldName) {
 	
 	log("====================================");
-	log("_extValueFieldName: The name of the linked library field from which results are calculated.");
 	log("_extLinkFieldName: Specifies the name of the link field in case there are multiple in the external library.");
 	log("_extLibName: The name of the linked library.");
 	log("e: The current entry().");
 	log("====================================");
 
 
-	if (e != null && _extLibName != null && _extValueFieldName != null) {
+	if (e != null && _extLibName != null && _extLinkFieldName != null) {
 		var tasklib = libByName(_extLibName);
 		var links = tasklib.linksTo(e);
 		var result = 0;
