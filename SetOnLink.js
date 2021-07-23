@@ -8,9 +8,16 @@ log("e: The current entry().");
 log("====================================");
 
 
- if (masterLib().title == xl) {
-  e.set(f, v);
-  message(f + " was set to " + v);
- }
+
+var links = libByName(xl).linksTo(e);
+
+for (var i = 0; i < links.length; i++) {
+  if (links[i] == e) {
+    e.set(f, v);
+    message(f + " was set to " + v);
+  }
+}
+
+ 
 
 } // SetOnLink
