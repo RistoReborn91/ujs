@@ -18,6 +18,6 @@ for (var i = 0; i < links.length; i++) {
   // }
 }
 
- 
+e.recalc();
 
 } // SetOnLink
