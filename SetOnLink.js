@@ -12,10 +12,10 @@ var exlib = libByName(xl);
 var links = exlib.linksTo(e);
 
 for (var i = 0; i < links.length; i++) {
-  if (links[i] == e) {
+  // if (links[i] == e) {
     e.set(f, v);
     message(f + " was set to " + v);
-  }
+  // }
 }
 
  
