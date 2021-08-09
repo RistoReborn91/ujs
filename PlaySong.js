@@ -1,12 +1,16 @@
 function PlaySong(e, _field) {
-var bgm1 = e.field(_field)[0];
-var q = bgm1.field("ID");
 
-i = intent("android.media.action.MEDIA_PLAY_FROM_SEARCH");
+var bgm = e.field(_field);
 
-i.extra("query", q);
+if (bgm.length == 0) {
+  message("This entry does not have any " + _field + " links.");
+else {
+var bgm1 = bgm[0];
+var q = bgm1.field("◻ ID"); 
 
-message("Playing " + q);
-
+i = intent("android.media.action.MEDIA_PLAY_FROM_SEARCH"); 
+i.extra("query", q); 
+message("Playing " + q); 
 i.send();
+}
 }
